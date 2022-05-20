@@ -30,13 +30,14 @@
         </div>
         <div class="navbar">
             <img src="images/logo.png" alt="" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Collections</a></li>
-                    <li><a href="">Category</a></li>
-                </ul>
+            <nav class="topnav" id="myTopnav">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Collections</a>
+                    <a href="">Category</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                      </a>
             </nav>
             <span class="btn">Get a Free Quote</span>
         </div>
@@ -122,5 +123,15 @@
             <span><p>©2022 Maxicool, all rights reserved</p></span>
         </div> 
     </div>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
 </body>
 </html>
