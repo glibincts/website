@@ -50,6 +50,11 @@ body{
 
 }
 
+.call a{
+  text-decoration: none;
+  color: #CCC;
+}
+
 
 .fa {
   color: #CCC;
@@ -237,6 +242,22 @@ footer{
   padding-top: 30px;
 }
 
+.content-footer a{
+  text-decoration: none;
+  color: #CCC;
+}
+.content-footer1{
+  padding-top: 10px;
+  color: #CCC;
+}
+.content-footer1 a{
+  text-decoration: none;
+  color: #CCC;
+}
+
+.footer-social{
+  padding-top: 10px;
+}
 
 .topnav {
   overflow: hidden;
@@ -248,12 +269,14 @@ footer{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
+  color: black;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  font-size: 21px;
   color: black;
+  transition-delay: 100ms;
 }
 
 
