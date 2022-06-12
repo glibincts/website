@@ -7,6 +7,9 @@
     <title>MaxiCool</title>
     <link rel="stylesheet" href="style.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    
 </head>
 <body>
     <div class="container">
@@ -15,12 +18,12 @@
                 <div class="mission tag-line-content">
                     <p>AC repair services at your doorstep </p>
                 </div>
-                <div class="social-icons tag-line-content">
+                <!-- <div class="social-icons tag-line-content">
                     <span><a href="#" class="fa fa-facebook"></a></span>
                     <span><a href="#" class="fa fa-twitter"></a></span>
                     <span><a href="#" class="fa fa-instagram"></a></span>
                     <span><a href="#" class="fa fa-youtube"></a></span>
-                </div>  
+                </div>   -->
                 <div class="call tag-line-content">
                     
                     <span><i class="fa fa-phone"> &nbsp; <a href="tel:+971557668849"> +971 557668849 </a>| <a href="tel:+971524143916"> +971 524143916</a> </i>
@@ -29,11 +32,15 @@
             </div>
         </div>
         <div class="navbar">
-            <img src="images/logo.png" alt="" class="logo">
+            <div class="logo-div">
+                <span><img src="images/logo.png" alt="" class="logo"></span>
+                <span><img src="images/logo-name.png" alt="" class="logo-name"></span>
+            </div>
+            
             <nav class="topnav" id="myTopnav">
                     <a href="">Home</a>
                     <a href="">About</a>
-                    <a href="">Collections</a>
+                    <!-- <a href="">Collections</a> -->
                     <a href="">Category</a>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
@@ -44,7 +51,7 @@
         <div class="content">
             <div class="row" id="row1-banner">
                 <div class="col-1 banner-content">
-                    <h1 class="banner-move-class">It's hot outside!<br> Turn of AC</h1>
+                    <h1 class="banner-move-class">It's hot outside!<br> Turn on AC</h1>
                     <p class="banner-move-class">Maxicool Technical Service L.L.C</p>
                     <a href="" class="btn banner-move-class">View Gallery</a>
                 </div> 
@@ -52,11 +59,32 @@
             <div class="row second-content-row">
                 <div class="second-content">
                     <div class="second-content-title">
-                        <h3>Welcome to Maxicool AC Repair and Service</h3>
+                        <h3>Welcome to Maxicool</h3>
                     </div>
                     <div class="second-content-paragraph">
-                        <p>AC technician performs the inspection of key components of unit  like compressor, fan motor, evaporator unit, condenser unit,  thermostat etc. during AC service to check for any fault. If any fault is found in the components during AC service then technician suggests a repair or replacement as required.</p>
+                        <!-- <p>AC technician performs the inspection of key components of unit  like compressor, fan motor, evaporator unit, condenser unit,  thermostat etc. during AC service to check for any fault. If any fault is found in the components during AC service then technician suggests a repair or replacement as required.</p> -->
+                        <p>
+                            We at Maxicool have been providing
+                            comprehensive line of professional services
+                            to many residential, commercial/public
+                            organizations and local authorities
+                            throughout Dubai.
+                            We are dedicated to provide supreme
+                            quality household services and with our
+                            effective strategies we ensure that each of
+                            our customer receives quality service and
+                            gets complete peace of mind.</p>
                     </div>
+                </div>
+            </div>
+            <div class="row third-content-row">
+                <div class="banner-auto-scroll">
+                    <div><img src="images/1.png"></div>
+                        <div><img src="images/2.png"></div>
+                            <div><img src="images/3.png"></div>
+                                <div><img src="images/4.png"></div>
+                                <!-- <div><img src="images/5.png"></div> -->
+                                <div><img src="images/6.png"></div>
                 </div>
             </div>
         </div>
@@ -132,6 +160,15 @@
             x.className = "topnav";
           }
         }
+        </script>
+        <script>
+            $('.banner-auto-scroll').click({
+                autoplay: true,
+                autoplaySpeed: 1000,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                arrows: false
+            });
         </script>
 </body>
 </html>
