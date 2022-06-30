@@ -78,13 +78,50 @@
                 </div>
             </div>
             <div class="row third-content-row">
-                <div class="banner-auto-scroll">
-                    <div><img src="images/1.png"></div>
-                        <div><img src="images/2.png"></div>
-                            <div><img src="images/3.png"></div>
-                                <div><img src="images/4.png"></div>
-                                <!-- <div><img src="images/5.png"></div> -->
-                                <div><img src="images/6.png"></div>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 5</div>
+                        <img src="images/1.png" style="width:100%">
+                        <!-- <div class="text">Caption Text</div> -->
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 5</div>
+                        <img src="images/2.png" style="width:100%">
+                        <!-- <div class="text">Caption Two</div> -->
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 5</div>
+                        <img src="images/3.png" style="width:100%">
+                        <!-- <div class="text">Caption Three</div> -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="images/4.png" style="width:100%">
+                        <!-- <div class="text">Caption Three</div> -->
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="images/6.png" style="width:100%">
+                        <!-- <div class="text">Caption Three</div> -->
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div class="dot-div" style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span> 
                 </div>
             </div>
         </div>
@@ -98,9 +135,9 @@
                             <h3 class="title-footer">Contact us</h3>
                         </span>
                         <span>
-                            <p class="content-footer"><i class="fa fa-phone"> &nbsp; <a href="tel:+971557668849"> +971 557668849 </a>| <a href="tel:+971524143916"> +971 524143916</a> </i>
+                            <p class="content-footer"><i class="fa fa-phone"><a href="tel:+971557668849"> +971 557668849 </a>|<a href="tel:+971524143916">+971 524143916</a> </i>
                              </p>
-                             <p class="content-footer1"><i class="fa fa-envelope">&nbsp; <a href="mailto:">maxicooluae@gmail.com</a> </i></p>
+                             <p class="content-footer1"><i class="fa fa-envelope"><a href="mailto:">maxicooluae@gmail.com</a> </i></p>
                         </span>
                     </div>
                     <div class="Social">
@@ -162,13 +199,32 @@
         }
         </script>
         <script>
-            $('.banner-auto-scroll').click({
-                autoplay: true,
-                autoplaySpeed: 1000,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: false
-            });
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            }
         </script>
 </body>
 </html>
