@@ -331,6 +331,23 @@ footer{
     text-align: center;
     justify-items: auto;
   }
+  .mission{
+    width: 100%;
+    font-size: small;
+  }
+  .tag-line-content{
+    font-size: 10px;
+    /* padding: 5px; */
+  }
+  .tag-line1{
+    float: left;
+    width: 100%;
+    margin: 0%;
+  }
+  .call{
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
