@@ -154,7 +154,7 @@ nav ul li a {
   height: 80vh;
   width: 100%;
   margin-top: 5px;
-  background-image: url(images/ac-image4.jpg);
+  background-image: url(images/ac4.jpg);
   background-position: center;
   background-size: cover;
   padding-left: 5%;
@@ -212,7 +212,11 @@ nav ul li a {
   float: left;
   border-radius: 5px;
   margin-top: 6px;
-  background: linear-gradient(12deg, #a3b4d7, black);
+  /* background: linear-gradient(12deg, #a3b4d7, black); */
+  background-image: url("./images/ac5.jpg");
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .second-content{
@@ -220,27 +224,44 @@ nav ul li a {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -ms-transform: translate(-20%, -50%);
+  transform: translate(-20%, -50%);
+  z-index: 2;
+  /* background: linear-gradient(12deg, #a3b4d7, rgb(168, 188, 193)); */
+  height: 50vh;
+  border-radius: 2rem;
+  /* width: 110vh; */
 }
+
 .second-content-title{
   font-size: 55px;
   /* text-transform: uppercase; */
-  color: black;
+  color: tomato !important;
+  
 }
 
 .second-content p{
-  /* color: #d6dce3; */
   padding-top: 30px;
+  color: grey;
 }
 
 .third-content-row{
-  min-height: 60vh;
+  min-height: 75vh;
   width: 100%;
   float: left
 }
 
-
+.content-our-services{
+  float: left;
+  /* background-image: url("./images/ac6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: white;
+  width: 100%;
+  min-height: 75vh;
+  text-align: center;
+}
 
 footer{
   width: 100%;
