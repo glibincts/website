@@ -261,6 +261,51 @@ nav ul li a {
   width: 100%;
   min-height: 75vh;
   text-align: center;
+  padding: 5vh;
+  animation-name: third-content-row-animation;
+  animation-duration: 10s;
+  animation-delay: 1s;
+}
+
+.our-server-column-group{
+  width: 100%;
+  float: left;
+  /* padding: 3vh; */
+  padding-top: 4vh;
+}
+
+.s1-content p{
+  color: #232d60 !important;
+  font-size: 15px !important;
+  text-align: justify;
+}
+
+.s1-content-inner:hover{
+  border: grey solid 1px;
+}
+
+.s1-content{
+  padding: 20px 20px;
+}
+
+.s1{
+  padding-top: 18px;
+}
+
+.s1-content-inner{
+  background-color: aliceblue;
+  min-height: inherit;
+  margin: 15px;
+}
+
+.s1-title{
+  font-size: 20px;
+  padding-top: 35px;
+}
+
+@keyframes third-content-row-animation {
+  from {background-color: white;}
+  to {background-color: ghostwhite;}
 }
 
 footer{
