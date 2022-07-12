@@ -73,12 +73,12 @@ body{
 }
 .navbar {
   margin-top: 55px;
-  width: 95%;
+  width: 100%;
   min-height: 18vh;
   margin: auto;
   display: flex;
   align-items: center;
-  padding-left: 1;
+  padding: 0 5vh;
   /* padding-top: 20px; */
   /* float: left; */
 }
@@ -88,6 +88,22 @@ body{
 }
 .logo-name{
   width: 20rem;
+}
+
+.logospan{
+  width: 45%;
+}
+
+.brandName{
+  float: left;
+}
+
+.brandName span{
+  float: left;
+}
+
+.brandnamediv{
+  float: left;
 }
 
 .cart {
