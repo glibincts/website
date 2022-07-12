@@ -320,7 +320,7 @@ nav ul li a {
 footer{
   width: 100%;
   background-color: #182333;
-  min-height: 400px;
+  min-height: 300px;
   padding: 10px 0px 25px 0px;
   float: left;
 }
@@ -331,7 +331,7 @@ footer{
 }
 
 .column{
-  min-height: 300px;
+  min-height: 255px;
   float: left;
   width: 33%;
   /* border: solid 1px; */
