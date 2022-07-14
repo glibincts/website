@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
     <title>Maxicool</title>
@@ -34,28 +35,32 @@
         </div>
         <div class="navbar">
             <div class="logo-div">
-                <!-- <span><img src="images/logo-name.png" alt="" class="logo-name"></span> -->
-                <div class="brandName">
-                    <div class="brandnamediv"><span class="logospan"><img src="images/logo.png" alt="" class="logo"></span></div>
-                    <div class="brandnamediv">
-                        <span class="firstname">MAXICOOL Technical</span><br>
-                        <span class="secondname">Services L.L.C</span>
+                <div class="logo-div">
+                    <!-- <span><img src="images/logo-name.png" alt="" class="logo-name"></span> -->
+                    <div class="brandName">
+                        <div class="brandnamediv"><span class="logospan"><img src="images/logo.png" alt="" class="logo"></span></div>
+                        <div class="brandnamediv">
+                            <span class="firstname">MAXICOOL TECHNICAL</span><br>
+                            <span class="secondname">SERVICES L.L.C</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="navbardiv">
-                <nav class="topnav" id="myTopnav">
-                    <a href="#">Home</a>
-                    <!-- <a href="">About</a> -->
-                    <!-- <a href="">Collections</a> -->
-                    <a target="_blank" href="./doc/Pricing.pdf">Pricing</a>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
-                      </a>
-                </nav>
-            </div>
-            <div class="freeqoute">
-                <span class="btn">Get a Free Quote</span>
+            <div class="navbar-div">
+                <div class="navbardiv">
+                    <nav class="topnav" id="myTopnav">
+                        <a href="#">Home</a>
+                        <!-- <a href="">About</a> -->
+                        <!-- <a href="">Collections</a> -->
+                        <a target="_blank" href="./doc/Pricing.pdf">Pricing</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                          </a>
+                    </nav>
+                </div>
+                <div class="freeqoute">
+                    <span class="btn" id="myBtn">Get a Free Quote</span>
+                </div>
             </div>
         </div>
         <div class="content">
@@ -224,7 +229,42 @@
         </footer>
         <div class="copyright">
             <span><p>©2022 Maxicool, all rights reserved</p></span>
-        </div> 
+        </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="getintouch">
+                    <p class="get-in-touch">Get in touch with us...</p>
+                </div>
+                
+                <form action="popup.php" method="post">
+                    <div class="formdiv">
+                        <div class="inputdiv fordivelements">
+                            <input type="text" id="name" name="name" placeholder="Name" class="input form-elements" required="">
+                            <input type="email" id="email" name="email" placeholder="Email Address" class="input form-elements" required=""><br>
+                            <input type="number" id="phone" name="phone" placeholder="Phone Number" class="input2 form-elements" pattern="[0-9]">
+                            <input type="text" id="country" name="country" placeholder="Country" class="input2 form-elements" required=""><br>
+                        </div>
+                        <div class="capbut fordivelements">
+                            <textarea rows="4" id="textarea" placeholder="Comments.." name="textarea" required="" class="textarea form-elements" spellcheck="false"></textarea>
+                            <!-- <div class="g-recaptcha form-elements" id="botid" data-sitekey="6LesYIcUAAAAAC44UF4iEpH1Qat6b-ZQ74S7pvb6" data-callback="enableBtn"><div><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LesYIcUAAAAAC44UF4iEpH1Qat6b-ZQ74S7pvb6&amp;co=aHR0cDovL3d3dy5zeXN0cnVzdC5pbjo4MA..&amp;hl=en&amp;v=4rwLQsl5N_ccppoTAwwwMrEN&amp;size=normal&amp;cb=5hk5fm1xvdn9" width="304" height="78" role="presentation" name="a-hlsbkquw355z" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="border: 1px solid rgb(193, 193, 193); padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>      -->
+                        </div>
+                        <div class="buttondiv fordivelements">
+                            <!-- <button id="popbutton" class="allservices form-elements" onsubmit="onSubmit()" disabled="">Submit</button> -->
+                            <button class="g-recaptcha form-elements" id="popbutton"
+                                data-sitekey="6Le69u4gAAAAADauAIcqdOaKZE97mc6p3NDmYEO9" 
+                                data-callback='onSubmit' 
+                                data-action='submit'>Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+  </div> 
     </div>
     <script>
         function myFunction() {
@@ -235,8 +275,8 @@
             x.className = "topnav";
           }
         }
-        </script>
-        <script>
+    </script>
+    <script>
             let slideIndex = 1;
             showSlides(slideIndex);
 
@@ -263,6 +303,38 @@
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].className += " active";
             }
-        </script>
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("popbutton").submit();
+        }
+    </script>
 </body>
 </html>

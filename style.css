@@ -71,17 +71,42 @@ body{
   position: relative;
   float: left;
 }
+
+.logo-div{
+  float: left;
+}
+
 .navbar {
   margin-top: 55px;
   width: 100%;
   min-height: 18vh;
   margin: auto;
-  display: flex;
-  align-items: center;
+  float: left;
+  /* display: flex; */
+  /* align-items: center; */
   padding: 0 5vh;
   /* padding-top: 20px; */
   /* float: left; */
+  padding: 2rem;
+  padding-top: 3rem;
+  text-align: end;
 }
+
+.navbar-div{
+  float: right;
+}
+
+.navbardiv{
+  float: left;
+  padding-right: 6rem;
+}
+
+.freeqoute{
+  float: left;
+  padding: 8px;
+  cursor: pointer;
+}
+
 .logo {
   width: 100px;
   cursor: pointer;
@@ -96,6 +121,7 @@ body{
 
 .brandName{
   float: left;
+  
 }
 
 .brandName span{
@@ -104,6 +130,10 @@ body{
 
 .brandnamediv{
   float: left;
+  font-size: 3vh;
+  font-weight: bolder;
+  font-family: Noto Sans;
+  text-shadow: 2px 2px 5px #2c77b5;
 }
 
 .cart {
@@ -243,16 +273,22 @@ nav ul li a {
 
 .second-content{
   margin: 0;
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-20%, -50%);
+  /* position: relative; */
+  
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-20%, -50%); */
   z-index: 2;
   /* background: linear-gradient(12deg, #a3b4d7, rgb(168, 188, 193)); */
   min-height: 50vh;
   border-radius: 2rem;
   /* width: 110vh; */
+  float: right;
+    width: 60%;
+    /* padding: 226px; */
+    /* margin-top: 30%; */
+    padding: 2;
+    padding-top: 20vh;
+    padding-right: 4px;
 }
 
 .second-content-title{
@@ -389,8 +425,8 @@ footer{
 }
 
 .topnav {
-  overflow: hidden; 
-  padding-top: 1rem;
+  /* overflow: hidden;  */
+  /* padding-top: 1rem; */
 }
 
 .topnav a {
@@ -598,4 +634,117 @@ img {vertical-align: middle;}
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; /* Full width */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: #0a090aad /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  padding-left: 7rem;
+  min-height: 40rem;
+  background-color: #172841;
+  background-image: url(./images/bg.jpg);
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.getintouch
+{
+  width: 100%;
+  /* text-align: center; */
+  /* padding: 2rem; */
+  font-size: x-large;
+  font-weight: bolder;
+  /* color: white; */
+}
+
+.formdiv input{
+  width: 45%;
+  min-height: 3em;
+  padding: 10px;
+  margin: 2px;
+  float: left;
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-right: 10px;
+}
+
+.formdiv{
+  float: left;
+  width: 100%;
+}
+
+.textarea{
+  width: 60%;
+  border-radius: 10px;
+  min-height: 7rem;
+  min-height: 3em;
+  padding: 10px;
+  margin: 2px;
+  border-radius: 10px;
+  margin-top: 2vh;
+  margin-right: 10px;
+}
+
+.form-elements{
+  margin-top: 1rem;
+  float: left;
+  font-size: 20px;
+}
+
+.get-in-touch{
+  padding-top: 5rem;
+}
+
+.modal-content form{
+  padding-top: 3vh;
+}
+
+#popbutton{
+  float: left;
+  font-size: 25px;
+  background: 008CBA;
+  padding: 10px;
+  
+}
+
+.capbut{
+  float: left;
+}
+
+.fordivelements{
+  float: left;
+  width: 100%;
 }
