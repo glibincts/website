@@ -5,7 +5,10 @@
 
 body{
   font-family: gdsherpa, Helvetica,Arial, sans-serif;
+  float: left;
+  min-width: 360px;
 }
+
 
 .tag-line{
   background-color: #182333;
@@ -94,7 +97,7 @@ body{
 
 .navbar-div{
   float: right;
-  padding-right: 10px;
+  /* padding-right: 10px; */
 }
 
 .navbardiv{
@@ -433,7 +436,7 @@ footer{
 
 .topnav a {
   float: left;
-  display: block;
+  /* display: block; */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -454,15 +457,28 @@ footer{
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
+  .topnav .icon{
     display: block;
   }
+  .topnav a{
+    padding: 0%;
+  }
+  .topnav{
+    padding-top: 10px;
+  }
+
+  #myLinks{
+    display: none;
+    float: left;
+  }
+
   .navbar{
     /* padding-top: 1rem; */
-    padding: 10px;
-    min-height: 13vh;
+    /* padding: 10px; */
+    min-height: 0%;
+    padding: 0%;
+    padding-top: 20px;
+    padding-bottom: 16px;
   }
   nav{
     padding-left: 0%;
@@ -477,20 +493,22 @@ footer{
     float: right;
   }
   .navbar-div{
-    /* width: 100%; */
+    width: 35px;
   }
   .brandnamediv{
     font-size: 16px;
   }
-#brandlogoid{
-  width: 15%;
-}
+  #brandlogoid{
+    width: 15%;
+    padding-top: 4px;
+  }
 
   .logo {
     font-size: 30px;
   }
   .logo-div{
-    width: 85%;
+    width: 89%;
+    padding-left: 8px;
   }
   .logospan {
     width: 100%;
@@ -501,6 +519,9 @@ footer{
   }
   .brandName{
     text-align: center;
+  }
+  #brandnameid{
+    padding-left: 10px;
   }
   .column{
     width: 100%;
