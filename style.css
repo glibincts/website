@@ -94,6 +94,7 @@ body{
 
 .navbar-div{
   float: right;
+  padding-right: 10px;
 }
 
 .navbardiv{
@@ -427,6 +428,7 @@ footer{
 .topnav {
   /* overflow: hidden;  */
   /* padding-top: 1rem; */
+  float: left;
 }
 
 .topnav a {
