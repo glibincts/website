@@ -452,13 +452,53 @@ footer{
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
+  .navbar{
+    /* padding-top: 1rem; */
+    padding: 10px;
+    min-height: 13vh;
+  }
+  nav{
+    padding-left: 0%;
+  }
+
   .navbar .btn{
     display: none;
+  }
+  .navbardiv{
+    padding-right: 0%;
+    /* padding: 1rem; */
+    float: right;
+  }
+  .navbar-div{
+    /* width: 100%; */
+  }
+  .brandnamediv{
+    font-size: 16px;
+  }
+#brandlogoid{
+  width: 15%;
+}
+
+  .logo {
+    font-size: 30px;
+  }
+  .logo-div{
+    width: 85%;
+  }
+  .logospan {
+    width: 100%;
+    float: left;
+  }
+  .logospan img{
+    width: 100%;
+  }
+  .brandName{
+    text-align: center;
   }
   .column{
     width: 100%;
