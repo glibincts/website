@@ -454,6 +454,9 @@ footer{
 .topnav .icon {
   display: none;
 }
+.mobile-container{
+  display: none;
+}
 
 @media screen and (max-width: 600px) {
   .topnav .icon{
@@ -467,10 +470,9 @@ footer{
   }
 
   #myLinks{
-    display: none;
+    /* display: none; */
     float: left;
   }
-
   .navbar{
     /* padding-top: 1rem; */
     /* padding: 10px; */
@@ -480,9 +482,13 @@ footer{
     padding-bottom: 16px;
     padding-right: 1px;
     padding-left: 1px;
+    height: auto;
   }
   nav{
     padding-left: 0%;
+  }
+  .navbar-div{
+    float: none;
   }
 
   .navbar .btn{
@@ -493,21 +499,62 @@ footer{
     /* padding: 1rem; */
     float: right;
   }
-  .navbar-div{
-    /* width: 35px; */
+  .topnav{
+    display: none;
   }
+  .mobile-container{
+    display: block;
+    max-width: 480px;
+    margin: auto;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+  }
+  .topnav #myLinks {
+    /* display: none; */
+    width: 100%;
+    float: left;
+  }
+  .content{
+    background-color: #182333;
+  }
+  #myLinks-m{
+    /* transition: width 2s, height 4s; */
+  }
+  #myLinks-m a{
+    display: flex;
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* color: blue; */
+    text-decoration: none;
+    padding-right: 10px;
+  }
+  #fa {
+    font-size: 24px;
+    margin: 15px 15px;
+  }
+
   .brandnamediv{
     font-size: 14px;
   }
   #brandlogoid{
-    width: 13%;
+    width: 20%;
   }
 
   .logo {
     font-size: 30px;
   }
   .logo-div{
-    /* width: 76%; */
+    width: 75%;
     padding-left: 5px;
     float: left;
     padding-top: 5px;
