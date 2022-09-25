@@ -473,13 +473,16 @@ footer{
     /* display: none; */
     float: left;
   }
+  #myLinks-m{
+    display: none;
+  }
   .navbar{
     /* padding-top: 1rem; */
     /* padding: 10px; */
     min-height: 0%;
     padding: 0%;
     padding-top: 20px;
-    padding-bottom: 16px;
+    /* padding-bottom: 16px; */
     padding-right: 1px;
     padding-left: 1px;
     height: auto;
@@ -523,7 +526,7 @@ footer{
   }
   #myLinks-m a{
     display: flex;
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 10px;
     color: white;
   }
@@ -554,7 +557,7 @@ footer{
     font-size: 30px;
   }
   .logo-div{
-    width: 75%;
+    width: 80%;
     padding-left: 5px;
     float: left;
     padding-top: 5px;
