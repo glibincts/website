@@ -548,7 +548,7 @@ footer{
   }
   .second-content {
     margin: 0;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     border-radius: 2rem;
     margin: 0;
     float: left;
@@ -558,10 +558,13 @@ footer{
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     z-index: 2;
-    /* background: linear-gradient(12deg, #a3b4d7, rgb(168, 188, 193)); */
     min-height: 50vh;
     border-radius: 2rem;
-    /* width: 110vh; */
+    padding-top: 10px;
+    width: 100%;
+  }
+  .second-content-row{
+    min-height: auto;
   }
   .second-content-title{
     font-size: 30px;
